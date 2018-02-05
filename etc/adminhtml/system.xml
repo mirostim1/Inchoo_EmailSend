@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mytab2" translate="label" sortOrder="10">
+            <label>F.A.Q. Emails</label>
+        </tab>
+        <section id="productfaq" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Email send</label>
+            <tab>mytab2</tab>
+            <resource>Inchoo_EmailSend::emailsend_config</resource>
+            <group id="emailsend" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Send email on new F.A.Q. settings</label>
+                <field id="email_template" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>New F.A.Q. Confirmation Template</label>
+                    <comment>Email template chosen based on theme fallback when "Default" option is selected.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+                <field id="email_to" translate="label comment" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send Email To</label>
+                    <comment>Comma-separated</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

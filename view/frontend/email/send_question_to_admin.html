@@ -1,0 +1,41 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject New F.A.Q. submitted @-->
+{{template config_path="design/email/header_template"}}
+
+<h1>Hello Admin!</h1>
+
+<br>
+
+<h3>You have new F.A.Q. submitted on product with Id <b>#{{var faq.product_id}}</b></h3>
+
+<hr><br>
+
+<table>
+    <tbody>
+        <tr>
+            <td>&bull; Question</td>
+            <td><b>{{var faq.question}}</b></td>
+        </tr>
+        <tr>
+            <td>&bull; From</td>
+            <td><b>{{var faq.customer_email}}</b></td>
+        </tr>
+        <tr>
+            <td>&bull; Customer Id</td>
+            <td><b> #{{var faq.customer_id}}</b></td>
+        </tr>
+    </tbody>
+</table>
+
+<br><br>
+
+<hr>
+
+<p align="center">
+    My Webshop &reg; http://magento.test
+</p>
